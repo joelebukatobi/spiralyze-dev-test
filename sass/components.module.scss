@@ -1,0 +1,275 @@
+// Components //
+// ---------------------------------------------------------------------//
+
+// Container //
+// ---------------------------------------------------------------------//
+.container {
+  @media all and (min-width: 320px) and (max-width: 767px) {
+    padding: 0 1.6rem;
+  }
+  @media all and (min-width: 767px) and (max-width: 1024px) {
+    padding: 0 2.4rem;
+  }
+  @media all and (min-width: 1024px) and (max-width: 1440px) {
+    padding: 0 7.2rem;
+  }
+  @media all and (min-width: 1440px) and (max-width: 1920px) {
+    margin: 0 auto;
+    padding: 0 12.8rem;
+    max-width: 144rem;
+  }
+  @media all and (min-width: 1920px) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12.8rem;
+    max-width: 144rem;
+  }
+}
+
+// Button //
+// ---------------------------------------------------------------------//
+button {
+  width: 22.1rem;
+  height: 5.6rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+  &:hover {
+    margin-top: 0.4rem;
+  }
+  &:active {
+    transform: translateY(0.4rem);
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.08);
+    background: #35bb9c;
+  }
+}
+
+.button-primary {
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  & svg {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 0.8rem;
+    fill: $color-white;
+  }
+}
+
+.button-secondary {
+  background: $color-white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-primary;
+  border: 0.2rem solid $color-primary;
+}
+
+// Tooltip //
+// ---------------------------------------------------------------------//
+.tooltip {
+  position: absolute;
+  background-image: url('../images/tooltip.svg');
+  & p {
+    font-weight: 300 !important;
+    color: $color-white;
+    font-size: 1.3rem !important;
+  }
+}
+
+// Form Inputs //
+// ---------------------------------------------------------------------//
+
+// Input Groups //
+// ---------------------------------------------------------------------//
+.input-group {
+  width: 48%;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+
+  & input,
+  & select {
+    &:focus + label {
+      color: $color-white;
+      background-color: #2a7d6c;
+      transition-delay: 0.05s;
+    }
+  }
+
+  & .input-tooltip {
+    display: none;
+  }
+  & .caret {
+    position: absolute;
+    height: 0.5rem;
+    width: 0.866rem;
+    top: 2rem;
+    right: 1.6rem;
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    & input {
+      width: 100%;
+      &:first-of-type {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+  @media (min-width: 472px) and (max-width: 767px) {
+    width: 48%;
+    & input {
+      width: 100%;
+    }
+  }
+}
+
+// Label //
+// ---------------------------------------------------------------------//
+label {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  color: transparent;
+  margin-left: 1.1rem;
+  padding: 0 0.5rem;
+  position: absolute;
+  z-index: 5;
+  top: -0.55rem;
+  background: transparent;
+  // display: none;
+}
+
+// Input //
+// ---------------------------------------------------------------------//
+input {
+  &::-webkit-input-placeholder {
+    color: rgba($color-white, 0.7);
+  }
+  &::-moz-placeholder {
+    color: rgba($color-white, 0.7);
+  }
+  &:-ms-input-placeholder {
+    color: rgba($color-white, 0.7);
+  }
+  &::-ms-input-placeholder {
+    color: rgba($color-white, 0.7);
+  }
+  &::placeholder {
+    color: rgba($color-white, 0.7);
+  }
+}
+
+input,
+select {
+  &:hover,
+  &:focus {
+    border: 0.1rem solid $color-white;
+  }
+}
+
+input,
+select {
+  font-size: 1.6rem;
+  line-height: 1.95rem;
+  height: 4.8rem;
+  border-radius: 0.2rem;
+  border: 0.1rem solid rgba($color-white, 0.5);
+  padding: 0 1.6rem;
+  background: transparent;
+  color: $color-white;
+}
+
+// Select //
+// ---------------------------------------------------------------------//
+select {
+  width: 100%;
+  background-color: transparent;
+  color: rgba($color-white, 0.7);
+  padding: 0 1.6rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0;
+  text-overflow: '';
+  & option {
+    background-color: $color-white;
+    outline: none;
+    border: none;
+    color: $color-tertiary;
+  }
+}
+
+// Error //
+// ---------------------------------------------------------------------//
+.error {
+  & input {
+    border: 0.1rem solid #ff7777;
+    &::-webkit-input-placeholder {
+      color: #ff7777 !important;
+    }
+    &::-moz-placeholder {
+      color: #ff7777 !important;
+    }
+    &:-ms-input-placeholder {
+      color: #ff7777 !important;
+    }
+    &::-ms-input-placeholder {
+      color: #ff7777 !important;
+    }
+    &::placeholder {
+      color: #ff7777 !important;
+    }
+  }
+  & label {
+    color: #ff7777;
+    background-color: #2a7d6c;
+  }
+
+  & select {
+    border: 0.1rem solid #ff7777;
+    &::-webkit-input-placeholder {
+      color: #ff7777 !important;
+    }
+    &::-moz-placeholder {
+      color: #ff7777 !important;
+    }
+    &:-ms-input-placeholder {
+      color: #ff7777 !important;
+    }
+    &::-ms-input-placeholder {
+      color: #ff7777 !important;
+    }
+    &::placeholder {
+      color: #ff7777 !important;
+    }
+  }
+
+  & .input-tooltip {
+    display: flex;
+    align-items: center;
+    background-image: url('../images/input-tooltip.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 4.8rem;
+    height: 7.3rem;
+    z-index: 2;
+    padding: 2.1rem 1.6rem 1.2rem 1.6rem;
+    & p {
+      font-size: 1.3rem;
+      line-height: 2rem;
+      width: 16.8rem;
+      color: $color-white;
+    }
+    @media (min-width: 320px) and (max-width: 767px) {
+      // width: 100%;
+      top: 8.4rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

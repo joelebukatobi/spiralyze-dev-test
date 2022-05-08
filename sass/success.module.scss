@@ -1,0 +1,70 @@
+// Success //
+// ---------------------------------------------------------------------//
+.success {
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__message {
+    padding: 2.4rem;
+    width: 30%;
+    background-color: $color-white;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+    & svg {
+      height: 8rem;
+      width: 8rem;
+      padding: 1.6rem;
+      fill: $color-primary;
+      border: 0.5rem solid $color-faded;
+      border-radius: 100%;
+    }
+    & h3 {
+      font-size: 2.4rem;
+    }
+    p {
+      font-size: 1.6rem;
+      width: 95%;
+    }
+    & hr {
+      margin-top: 0.8rem;
+      height: 0.3rem;
+      background-color: $color-primary;
+      width: 25%;
+      border: none;
+    }
+
+    a {
+      font-size: 1.4rem;
+      font-weight: 500;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 0 1.6rem;
+    &__message {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 576px) and (max-width: 1023px) {
+    padding: 0 1.6rem;
+    &__message {
+      width: 75%;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+// Color Variables //
+// ---------------------------------------------------------------------//
+$color-white: #ffffff;
+$color-primary: #5bc8af;
+$color-secondary: #297c6b;
+$color-tertiary: #194d44;
+$color-text: #333;
+$color-faded: #eaeaea;
+$color-gray: #f5f5f5;
+
+// Font Variables //
+// ---------------------------------------------------------------------//
+$font-primary: 'Montserrat', sans-serif;
+
+// Main //
+// ---------------------------------------------------------------------//
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  color: $color-text;
+  font-family: $font-primary;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+input:link,
+input:hover,
+input:focus,
+input:active {
+  outline: none;
+}
+
+select:link,
+select:hover,
+select:focus,
+select:active {
+  outline: none;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+button:link,
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px = 62.5% 1rem
+  font-family: $font-primary;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    // font-size: 50%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  line-height: 1.6;
+}
