@@ -453,7 +453,7 @@ form.addEventListener('submit', (e) => {
         if (checkCompany()) {
           checkCountry();
           if (checkCountry()) {
-            window.location.href = '/success.html';
+            window.location.href = './success.html';
           }
         }
       }
