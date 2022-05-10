@@ -426,7 +426,8 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   // checkFirstName();
 
-  const websiteFolder = windows.location.hostname;
+  const websiteFolder = window.location.hostname;
+  console.log(websiteFolder);
 
   if (checkFirstName()) {
     checkLastName();
