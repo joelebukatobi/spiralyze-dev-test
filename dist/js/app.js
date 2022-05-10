@@ -426,9 +426,6 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   // checkFirstName();
 
-  const websiteFolder = window.location.hostname;
-  console.log(websiteFolder);
-
   if (checkFirstName()) {
     checkLastName();
     if (checkLastName()) {
@@ -438,7 +435,7 @@ form.addEventListener('submit', (e) => {
         if (checkCompany()) {
           checkCountry();
           if (checkCountry()) {
-            window.location.href = `${websiteFolder}/success.html`;
+            window.location.href = 'https://joelebukatobi.github.io/spiralyze-dev-test/success.html';
           }
         }
       }
