@@ -1,21 +1,3 @@
-// Carousel initialization Using Swiper.js //
-// ------------------------------------------------------------------------- //
-var swiper = new Swiper('.mySwiper', {
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-  autoplay: {
-    delay: 5000,
-  },
-});
-
 // Menu Animation //
 // ------------------------------------------------------------------------- //
 let menuButton = document.querySelector('.navbar__mobile__menu');
@@ -444,6 +426,8 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   // checkFirstName();
 
+  const websiteFolder = windows.location.hostname;
+
   if (checkFirstName()) {
     checkLastName();
     if (checkLastName()) {
@@ -453,7 +437,7 @@ form.addEventListener('submit', (e) => {
         if (checkCompany()) {
           checkCountry();
           if (checkCountry()) {
-            window.location.href = './success.html';
+            window.location.href = `${websiteFolder}/success.html`;
           }
         }
       }
@@ -481,3 +465,21 @@ window.onclick = (e) => {
     modal.style.display = 'none';
   }
 };
+
+// Carousel initialization Using Swiper.js //
+// ------------------------------------------------------------------------- //
+var swiper = new Swiper('.mySwiper', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 5000,
+  },
+});
