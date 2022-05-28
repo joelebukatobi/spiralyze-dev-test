@@ -4,14 +4,11 @@
   position: absolute;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 2.05rem;
-  top: 0;
-  left: 0;
   z-index: 20;
+  top: 2.05rem;
   &__mobile {
     &__menu {
       display: inline-block;
@@ -21,7 +18,7 @@
       margin-right: 4rem;
       &__link {
         & svg {
-          height: 3.5rem;
+          height: 4.1rem;
           width: 22.609rem;
         }
       }
@@ -82,7 +79,7 @@
     }
   }
 
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 620px) {
     display: block;
     margin: 0;
     &__mobile {
@@ -276,7 +273,7 @@
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 620px) and (max-width: 768px) {
     padding: 2.05rem 2.4rem 0 2.4rem;
     align-items: flex-start;
     &__nav {

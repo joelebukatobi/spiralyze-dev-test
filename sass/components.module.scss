@@ -14,15 +14,16 @@
     padding: 0 7.2rem;
   }
   @media all and (min-width: 1440px) and (max-width: 1920px) {
+    width: 100%;
     margin: 0 auto;
-    padding: 0 12.8rem;
     max-width: 144rem;
   }
   @media all and (min-width: 1920px) {
-    width: 100%;
     margin: 0 auto;
-    padding: 0 12.8rem;
     max-width: 144rem;
+  }
+  @media all and (min-width: 2560px) {
+    margin: 0 auto;
   }
 }
 
@@ -272,4 +273,8 @@ select {
       transform: translate(-50%, -50%);
     }
   }
+}
+
+.hidden {
+  display: none;
 }

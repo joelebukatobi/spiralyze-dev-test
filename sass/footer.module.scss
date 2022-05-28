@@ -4,17 +4,21 @@
   padding-top: 3.8rem;
   padding-bottom: 3.8rem;
   background-color: $color-faded;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   & p {
     font-size: 1.4rem;
     color: #575757;
     font-weight: 400;
   }
 
-  @media (min-width: 320px) and (max-width: 767px) {
-    flex-direction: column;
+  @media (min-width: 320px) and (max-width: 768px) {
+    & .container {
+      flex-direction: column;
+    }
     padding: 3.2rem;
     & p {
       font-size: 1.2rem;
@@ -25,7 +29,9 @@
   }
 
   @media (min-width: 320px) and (max-width: 375px) {
-    flex-direction: column;
+    & .container {
+      flex-direction: column;
+    }
     padding: 3.2rem 0;
     & p {
       font-size: 1.2rem;
@@ -33,8 +39,6 @@
   }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-    flex-direction: column;
-    padding: 2.4rem;
     & p {
       &:first-of-type {
         margin-bottom: 0.8rem;
